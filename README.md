@@ -2,6 +2,7 @@
 使用STM32CubeMX+VSCode开发STM32
 
 # 博客地址
+[CSDN](https://blog.csdn.net/u013671216/article/details/106170433)
 
 # 注意.vscode 中的几个文件
 
