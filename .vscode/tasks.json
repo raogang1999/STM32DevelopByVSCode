@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译项目",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-j4"
+            ]
+        },
+        {
+        "label": "启动调试下载器",
+        "type": "shell",
+        "command":"openocd -f interface/cmsis-dap.cfg -c 'transport select swd' -f target/stm32f1x.cfg" 
+       }
+
+    ]
+}
+
+/**
+启动调试下载器命令 openocd- f interface/ cmsis-dap.cfg-c' transport select swd- f target/stm32f1x.c
+选择下载器型号
+D: \OpenOCD-20191216-0100\share\openocd\scripts\interface
+选择芯片型号
+D: \OpenoCD-20191216-0.10.0\share\openocd\ scripts\target
+printf问题结尾加\n
+支持f1oat makefile加- u printf f1oat
+#libraries
+LiBS=-1c-1m-1 nosy
+LIBDIR=
+LDFLAGS= $(MCU)-specs=nano specs -u printf float -T$(LDSCRIPT)$(LIBDIR) $(LIBS )-Wl,-Map=$(BUILD DIR)/$(TARGET).map
+*/ 

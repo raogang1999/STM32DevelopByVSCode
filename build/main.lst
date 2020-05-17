@@ -1,0 +1,486 @@
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  16              		.align	1
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	MX_GPIO_Init:
+  23              	.LFB67:
+  24              		.file 1 "Src/main.c"
+   1:Src/main.c    **** /* USER CODE BEGIN Header */
+   2:Src/main.c    **** /**
+   3:Src/main.c    ****   ******************************************************************************
+   4:Src/main.c    ****   * @file           : main.c
+   5:Src/main.c    ****   * @brief          : Main program body
+   6:Src/main.c    ****   ******************************************************************************
+   7:Src/main.c    ****   * @attention
+   8:Src/main.c    ****   *
+   9:Src/main.c    ****   * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  10:Src/main.c    ****   * All rights reserved.</center></h2>
+  11:Src/main.c    ****   *
+  12:Src/main.c    ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Src/main.c    ****   * the "License"; You may not use this file except in compliance with the
+  14:Src/main.c    ****   * License. You may obtain a copy of the License at:
+  15:Src/main.c    ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Src/main.c    ****   *
+  17:Src/main.c    ****   ******************************************************************************
+  18:Src/main.c    ****   */
+  19:Src/main.c    **** /* USER CODE END Header */
+  20:Src/main.c    **** 
+  21:Src/main.c    **** /* Includes ------------------------------------------------------------------*/
+  22:Src/main.c    **** #include "main.h"
+  23:Src/main.c    **** 
+  24:Src/main.c    **** /* Private includes ----------------------------------------------------------*/
+  25:Src/main.c    **** /* USER CODE BEGIN Includes */
+  26:Src/main.c    **** 
+  27:Src/main.c    **** /* USER CODE END Includes */
+  28:Src/main.c    **** 
+  29:Src/main.c    **** /* Private typedef -----------------------------------------------------------*/
+  30:Src/main.c    **** /* USER CODE BEGIN PTD */
+  31:Src/main.c    **** 
+  32:Src/main.c    **** /* USER CODE END PTD */
+  33:Src/main.c    **** 
+  34:Src/main.c    **** /* Private define ------------------------------------------------------------*/
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 2
+
+
+  35:Src/main.c    **** /* USER CODE BEGIN PD */
+  36:Src/main.c    **** /* USER CODE END PD */
+  37:Src/main.c    **** 
+  38:Src/main.c    **** /* Private macro -------------------------------------------------------------*/
+  39:Src/main.c    **** /* USER CODE BEGIN PM */
+  40:Src/main.c    **** 
+  41:Src/main.c    **** /* USER CODE END PM */
+  42:Src/main.c    **** 
+  43:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+  44:Src/main.c    **** 
+  45:Src/main.c    **** /* USER CODE BEGIN PV */
+  46:Src/main.c    **** 
+  47:Src/main.c    **** /* USER CODE END PV */
+  48:Src/main.c    **** 
+  49:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+  50:Src/main.c    **** void SystemClock_Config(void);
+  51:Src/main.c    **** static void MX_GPIO_Init(void);
+  52:Src/main.c    **** /* USER CODE BEGIN PFP */
+  53:Src/main.c    **** 
+  54:Src/main.c    **** /* USER CODE END PFP */
+  55:Src/main.c    **** 
+  56:Src/main.c    **** /* Private user code ---------------------------------------------------------*/
+  57:Src/main.c    **** /* USER CODE BEGIN 0 */
+  58:Src/main.c    **** 
+  59:Src/main.c    **** /* USER CODE END 0 */
+  60:Src/main.c    **** 
+  61:Src/main.c    **** /**
+  62:Src/main.c    ****   * @brief  The application entry point.
+  63:Src/main.c    ****   * @retval int
+  64:Src/main.c    ****   */
+  65:Src/main.c    **** int main(void)
+  66:Src/main.c    **** {
+  67:Src/main.c    ****   /* USER CODE BEGIN 1 */
+  68:Src/main.c    **** 
+  69:Src/main.c    ****   /* USER CODE END 1 */
+  70:Src/main.c    ****   
+  71:Src/main.c    ****   
+  72:Src/main.c    ****   /* MCU Configuration--------------------------------------------------------*/
+  73:Src/main.c    **** 
+  74:Src/main.c    ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  75:Src/main.c    ****   HAL_Init();
+  76:Src/main.c    **** 
+  77:Src/main.c    ****   /* USER CODE BEGIN Init */
+  78:Src/main.c    **** 
+  79:Src/main.c    ****   /* USER CODE END Init */
+  80:Src/main.c    **** 
+  81:Src/main.c    ****   /* Configure the system clock */
+  82:Src/main.c    ****   SystemClock_Config();
+  83:Src/main.c    **** 
+  84:Src/main.c    ****   /* USER CODE BEGIN SysInit */
+  85:Src/main.c    **** 
+  86:Src/main.c    ****   /* USER CODE END SysInit */
+  87:Src/main.c    **** 
+  88:Src/main.c    ****   /* Initialize all configured peripherals */
+  89:Src/main.c    ****   MX_GPIO_Init();
+  90:Src/main.c    ****   /* USER CODE BEGIN 2 */
+  91:Src/main.c    **** 
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 3
+
+
+  92:Src/main.c    ****   /* USER CODE END 2 */
+  93:Src/main.c    **** 
+  94:Src/main.c    ****   /* Infinite loop */
+  95:Src/main.c    ****   /* USER CODE BEGIN WHILE */
+  96:Src/main.c    ****   while (1)
+  97:Src/main.c    ****   {
+  98:Src/main.c    ****     /* USER CODE END WHILE */
+  99:Src/main.c    **** 
+ 100:Src/main.c    ****     /* USER CODE BEGIN 3 */
+ 101:Src/main.c    ****   }
+ 102:Src/main.c    ****   /* USER CODE END 3 */
+ 103:Src/main.c    **** }
+ 104:Src/main.c    **** 
+ 105:Src/main.c    **** /**
+ 106:Src/main.c    ****   * @brief System Clock Configuration
+ 107:Src/main.c    ****   * @retval None
+ 108:Src/main.c    ****   */
+ 109:Src/main.c    **** void SystemClock_Config(void)
+ 110:Src/main.c    **** {
+ 111:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 112:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 113:Src/main.c    **** 
+ 114:Src/main.c    ****   /** Initializes the CPU, AHB and APB busses clocks 
+ 115:Src/main.c    ****   */
+ 116:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+ 117:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 118:Src/main.c    ****   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+ 119:Src/main.c    ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 120:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 121:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 122:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+ 123:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 124:Src/main.c    ****   {
+ 125:Src/main.c    ****     Error_Handler();
+ 126:Src/main.c    ****   }
+ 127:Src/main.c    ****   /** Initializes the CPU, AHB and APB busses clocks 
+ 128:Src/main.c    ****   */
+ 129:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 130:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 131:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 132:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 133:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+ 134:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 135:Src/main.c    **** 
+ 136:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+ 137:Src/main.c    ****   {
+ 138:Src/main.c    ****     Error_Handler();
+ 139:Src/main.c    ****   }
+ 140:Src/main.c    **** }
+ 141:Src/main.c    **** 
+ 142:Src/main.c    **** /**
+ 143:Src/main.c    ****   * @brief GPIO Initialization Function
+ 144:Src/main.c    ****   * @param None
+ 145:Src/main.c    ****   * @retval None
+ 146:Src/main.c    ****   */
+ 147:Src/main.c    **** static void MX_GPIO_Init(void)
+ 148:Src/main.c    **** {
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 4
+
+
+  25              		.loc 1 148 0
+  26              		.cfi_startproc
+  27              		@ args = 0, pretend = 0, frame = 24
+  28              		@ frame_needed = 0, uses_anonymous_args = 0
+  29 0000 30B5     		push	{r4, r5, lr}
+  30              	.LCFI0:
+  31              		.cfi_def_cfa_offset 12
+  32              		.cfi_offset 4, -12
+  33              		.cfi_offset 5, -8
+  34              		.cfi_offset 14, -4
+  35 0002 87B0     		sub	sp, sp, #28
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 40
+ 149:Src/main.c    ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  38              		.loc 1 149 0
+  39 0004 0024     		movs	r4, #0
+  40 0006 0294     		str	r4, [sp, #8]
+  41 0008 0394     		str	r4, [sp, #12]
+  42 000a 0494     		str	r4, [sp, #16]
+  43 000c 0594     		str	r4, [sp, #20]
+  44              	.LBB2:
+ 150:Src/main.c    **** 
+ 151:Src/main.c    ****   /* GPIO Ports Clock Enable */
+ 152:Src/main.c    ****   __HAL_RCC_GPIOD_CLK_ENABLE();
+  45              		.loc 1 152 0
+  46 000e 124B     		ldr	r3, .L3
+  47 0010 9A69     		ldr	r2, [r3, #24]
+  48 0012 42F02002 		orr	r2, r2, #32
+  49 0016 9A61     		str	r2, [r3, #24]
+  50 0018 9A69     		ldr	r2, [r3, #24]
+  51 001a 02F02002 		and	r2, r2, #32
+  52 001e 0092     		str	r2, [sp]
+  53 0020 009A     		ldr	r2, [sp]
+  54              	.LBE2:
+  55              	.LBB3:
+ 153:Src/main.c    ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  56              		.loc 1 153 0
+  57 0022 9A69     		ldr	r2, [r3, #24]
+  58 0024 42F00402 		orr	r2, r2, #4
+  59 0028 9A61     		str	r2, [r3, #24]
+  60 002a 9B69     		ldr	r3, [r3, #24]
+  61 002c 03F00403 		and	r3, r3, #4
+  62 0030 0193     		str	r3, [sp, #4]
+  63 0032 019B     		ldr	r3, [sp, #4]
+  64              	.LBE3:
+ 154:Src/main.c    **** 
+ 155:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 156:Src/main.c    ****   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+  65              		.loc 1 156 0
+  66 0034 094D     		ldr	r5, .L3+4
+  67 0036 2246     		mov	r2, r4
+  68 0038 0121     		movs	r1, #1
+  69 003a 2846     		mov	r0, r5
+  70 003c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  71              	.LVL0:
+ 157:Src/main.c    **** 
+ 158:Src/main.c    ****   /*Configure GPIO pin : PA0 */
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 5
+
+
+ 159:Src/main.c    ****   GPIO_InitStruct.Pin = GPIO_PIN_0;
+  72              		.loc 1 159 0
+  73 0040 0123     		movs	r3, #1
+  74 0042 0293     		str	r3, [sp, #8]
+ 160:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  75              		.loc 1 160 0
+  76 0044 0393     		str	r3, [sp, #12]
+ 161:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  77              		.loc 1 161 0
+  78 0046 0494     		str	r4, [sp, #16]
+ 162:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  79              		.loc 1 162 0
+  80 0048 0223     		movs	r3, #2
+  81 004a 0593     		str	r3, [sp, #20]
+ 163:Src/main.c    ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  82              		.loc 1 163 0
+  83 004c 02A9     		add	r1, sp, #8
+  84 004e 2846     		mov	r0, r5
+  85 0050 FFF7FEFF 		bl	HAL_GPIO_Init
+  86              	.LVL1:
+ 164:Src/main.c    **** 
+ 165:Src/main.c    **** }
+  87              		.loc 1 165 0
+  88 0054 07B0     		add	sp, sp, #28
+  89              	.LCFI2:
+  90              		.cfi_def_cfa_offset 12
+  91              		@ sp needed
+  92 0056 30BD     		pop	{r4, r5, pc}
+  93              	.L4:
+  94              		.align	2
+  95              	.L3:
+  96 0058 00100240 		.word	1073876992
+  97 005c 00080140 		.word	1073809408
+  98              		.cfi_endproc
+  99              	.LFE67:
+ 101              		.section	.text.SystemClock_Config,"ax",%progbits
+ 102              		.align	1
+ 103              		.global	SystemClock_Config
+ 104              		.syntax unified
+ 105              		.thumb
+ 106              		.thumb_func
+ 107              		.fpu softvfp
+ 109              	SystemClock_Config:
+ 110              	.LFB66:
+ 110:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 111              		.loc 1 110 0
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 64
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115 0000 30B5     		push	{r4, r5, lr}
+ 116              	.LCFI3:
+ 117              		.cfi_def_cfa_offset 12
+ 118              		.cfi_offset 4, -12
+ 119              		.cfi_offset 5, -8
+ 120              		.cfi_offset 14, -4
+ 121 0002 91B0     		sub	sp, sp, #68
+ 122              	.LCFI4:
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 6
+
+
+ 123              		.cfi_def_cfa_offset 80
+ 111:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 124              		.loc 1 111 0
+ 125 0004 0024     		movs	r4, #0
+ 126 0006 0894     		str	r4, [sp, #32]
+ 127 0008 0994     		str	r4, [sp, #36]
+ 128 000a 0B94     		str	r4, [sp, #44]
+ 129 000c 0C94     		str	r4, [sp, #48]
+ 112:Src/main.c    **** 
+ 130              		.loc 1 112 0
+ 131 000e 0194     		str	r4, [sp, #4]
+ 132 0010 0294     		str	r4, [sp, #8]
+ 133 0012 0394     		str	r4, [sp, #12]
+ 134 0014 0494     		str	r4, [sp, #16]
+ 135 0016 0594     		str	r4, [sp, #20]
+ 116:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 136              		.loc 1 116 0
+ 137 0018 0122     		movs	r2, #1
+ 138 001a 0692     		str	r2, [sp, #24]
+ 117:Src/main.c    ****   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+ 139              		.loc 1 117 0
+ 140 001c 4FF48033 		mov	r3, #65536
+ 141 0020 0793     		str	r3, [sp, #28]
+ 119:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 142              		.loc 1 119 0
+ 143 0022 0A92     		str	r2, [sp, #40]
+ 120:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 144              		.loc 1 120 0
+ 145 0024 0225     		movs	r5, #2
+ 146 0026 0D95     		str	r5, [sp, #52]
+ 121:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+ 147              		.loc 1 121 0
+ 148 0028 0E93     		str	r3, [sp, #56]
+ 122:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 149              		.loc 1 122 0
+ 150 002a 4FF4E013 		mov	r3, #1835008
+ 151 002e 0F93     		str	r3, [sp, #60]
+ 123:Src/main.c    ****   {
+ 152              		.loc 1 123 0
+ 153 0030 06A8     		add	r0, sp, #24
+ 154 0032 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 155              	.LVL2:
+ 129:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 156              		.loc 1 129 0
+ 157 0036 0F23     		movs	r3, #15
+ 158 0038 0193     		str	r3, [sp, #4]
+ 131:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 159              		.loc 1 131 0
+ 160 003a 0295     		str	r5, [sp, #8]
+ 132:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+ 161              		.loc 1 132 0
+ 162 003c 0394     		str	r4, [sp, #12]
+ 133:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 163              		.loc 1 133 0
+ 164 003e 4FF48063 		mov	r3, #1024
+ 165 0042 0493     		str	r3, [sp, #16]
+ 134:Src/main.c    **** 
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 7
+
+
+ 166              		.loc 1 134 0
+ 167 0044 0594     		str	r4, [sp, #20]
+ 136:Src/main.c    ****   {
+ 168              		.loc 1 136 0
+ 169 0046 2946     		mov	r1, r5
+ 170 0048 01A8     		add	r0, sp, #4
+ 171 004a FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 172              	.LVL3:
+ 140:Src/main.c    **** 
+ 173              		.loc 1 140 0
+ 174 004e 11B0     		add	sp, sp, #68
+ 175              	.LCFI5:
+ 176              		.cfi_def_cfa_offset 12
+ 177              		@ sp needed
+ 178 0050 30BD     		pop	{r4, r5, pc}
+ 179              		.cfi_endproc
+ 180              	.LFE66:
+ 182              		.section	.text.main,"ax",%progbits
+ 183              		.align	1
+ 184              		.global	main
+ 185              		.syntax unified
+ 186              		.thumb
+ 187              		.thumb_func
+ 188              		.fpu softvfp
+ 190              	main:
+ 191              	.LFB65:
+  66:Src/main.c    ****   /* USER CODE BEGIN 1 */
+ 192              		.loc 1 66 0
+ 193              		.cfi_startproc
+ 194              		@ Volatile: function does not return.
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197 0000 08B5     		push	{r3, lr}
+ 198              	.LCFI6:
+ 199              		.cfi_def_cfa_offset 8
+ 200              		.cfi_offset 3, -8
+ 201              		.cfi_offset 14, -4
+  75:Src/main.c    **** 
+ 202              		.loc 1 75 0
+ 203 0002 FFF7FEFF 		bl	HAL_Init
+ 204              	.LVL4:
+  82:Src/main.c    **** 
+ 205              		.loc 1 82 0
+ 206 0006 FFF7FEFF 		bl	SystemClock_Config
+ 207              	.LVL5:
+  89:Src/main.c    ****   /* USER CODE BEGIN 2 */
+ 208              		.loc 1 89 0
+ 209 000a FFF7FEFF 		bl	MX_GPIO_Init
+ 210              	.LVL6:
+ 211              	.L8:
+ 212 000e FEE7     		b	.L8
+ 213              		.cfi_endproc
+ 214              	.LFE65:
+ 216              		.section	.text.Error_Handler,"ax",%progbits
+ 217              		.align	1
+ 218              		.global	Error_Handler
+ 219              		.syntax unified
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 8
+
+
+ 220              		.thumb
+ 221              		.thumb_func
+ 222              		.fpu softvfp
+ 224              	Error_Handler:
+ 225              	.LFB68:
+ 166:Src/main.c    **** 
+ 167:Src/main.c    **** /* USER CODE BEGIN 4 */
+ 168:Src/main.c    **** 
+ 169:Src/main.c    **** /* USER CODE END 4 */
+ 170:Src/main.c    **** 
+ 171:Src/main.c    **** /**
+ 172:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
+ 173:Src/main.c    ****   * @retval None
+ 174:Src/main.c    ****   */
+ 175:Src/main.c    **** void Error_Handler(void)
+ 176:Src/main.c    **** {
+ 226              		.loc 1 176 0
+ 227              		.cfi_startproc
+ 228              		@ args = 0, pretend = 0, frame = 0
+ 229              		@ frame_needed = 0, uses_anonymous_args = 0
+ 230              		@ link register save eliminated.
+ 177:Src/main.c    ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 178:Src/main.c    ****   /* User can add his own implementation to report the HAL error return state */
+ 179:Src/main.c    **** 
+ 180:Src/main.c    ****   /* USER CODE END Error_Handler_Debug */
+ 181:Src/main.c    **** }
+ 231              		.loc 1 181 0
+ 232 0000 7047     		bx	lr
+ 233              		.cfi_endproc
+ 234              	.LFE68:
+ 236              		.text
+ 237              	.Letext0:
+ 238              		.file 2 "d:\\stm32developtools\\arm-none-eabi\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 239              		.file 3 "d:\\stm32developtools\\arm-none-eabi\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 240              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 241              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 242              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 243              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 244              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 245              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 246              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 247              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:16     .text.MX_GPIO_Init:0000000000000000 $t
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:22     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:96     .text.MX_GPIO_Init:0000000000000058 $d
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:102    .text.SystemClock_Config:0000000000000000 $t
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:109    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:183    .text.main:0000000000000000 $t
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:190    .text.main:0000000000000000 main
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:217    .text.Error_Handler:0000000000000000 $t
+C:\Users\Gregory\AppData\Local\Temp\ccMaMYOY.s:224    .text.Error_Handler:0000000000000000 Error_Handler
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_Init

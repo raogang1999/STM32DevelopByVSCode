@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "name": "npc",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/STM32DevelopTools/arm-none-eabi/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_HAL_DRIVER",
+                "STM32F103xB"
+            ],
+            "cStandard": "c99",
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "${workspaceRoot}/Inc",
+                    "${workspaceRoot}/Src",
+                    "${workspaceRoot}/Drivers/STM32F1xx_HAL_Driver/Inc",
+                    "${workspaceRoot}/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+                    "${workspaceRoot}/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                    "${workspaceRoot}/Drivers/CMSIS/Include",
+                    "D:/STM32DevelopTools/arm-none-eabi/arm-none-eabi/include",
+                    "D:/STM32DevelopTools/arm-none-eabi/arm-none-eabi/include/c++/7.3.1",
+                    "D:/STM32DevelopTools/arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi/thumb/v7-m",
+                    "D:/STM32DevelopTools/arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward",
+                    "D:/STM32DevelopTools/arm-none-eabi/arm-none-eabi/include/sys",
+                    "D:/STM32DevelopTools/arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include",
+                    "D:/STM32DevelopTools/arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed"    
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}
